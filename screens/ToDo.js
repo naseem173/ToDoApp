@@ -74,8 +74,6 @@ export default function ToDo({ navigation }) {
           AppStyles.leftMargin,
         ]}>
         <View style={AppStyles.fillSpace}>
-          <Text style={AppStyles.title}>{item.text}</Text>
-          <Text style={AppStyles.description}>{item.description}</Text>
           <BouncyCheckbox
             isChecked={item.complated}
             size={25}
@@ -121,10 +119,6 @@ export default function ToDo({ navigation }) {
           onPress={() => setModalVisible(true)}
           color="#fb4d3d"
         />
-        <AddToDoModal
-          onClose={() => setModalVisible(false)}
-          addToDo={addToDo} 
-        />
       </View>
     );
   };
@@ -143,8 +137,7 @@ export default function ToDo({ navigation }) {
 
   let addToDo = async (todo) => {
     let toDoToSave = {
-      text: todo.text,
-      description: todo.description,
+      text: todo,
       completed: false,
       userId: auth.currentUser.uid,
     };

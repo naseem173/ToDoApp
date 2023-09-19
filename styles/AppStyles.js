@@ -92,6 +92,7 @@ export default StyleSheet.create({
     borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",
+    marginRight: 14,
   },
   buttonOk: {
     backgroundColor: "#688cde",
