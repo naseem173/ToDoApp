@@ -1,40 +1,80 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-  container: {
+  imageContainer: {
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 16,
+  },
+  noPadding: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "red",
+  },
   rowContainer: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    marginVertical: 16,
+    alignSelf: "stretch",
+    marginVertical: 4,
   },
-  backgroundColor: {
+  fillSpace: {
+    flex: 1,
+  },
+  rightAligned: {
+    justifyContent: "flex-end",
+  },
+  topMargin: {
+    marginTop: 40,
+  },
+  bottomMargin: {
+    marginBottom: 16,
+  },
+  rightMargin: {
+    marginRight: 16,
+  },
+  leftMargin: {
+    marginLeft: 16,
+  },
+  backgroundCover: {
     alignSelf: "stretch",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#000000",
-    opacity: 0.6,
+    opacity: 0.7,
     padding: 16,
   },
   lightText: {
     color: "#fff",
   },
+  errorText: {
+    color: "#ff0000",
+  },
   header: {
     fontSize: 20,
+    alignSelf: "center",
   },
   textInput: {
     alignSelf: "stretch",
     padding: 8,
     borderBottomWidth: 2,
-    paddingVertical: 12,
+    marginVertical: 8,
   },
   lightTextInput: {
     borderBottomColor: "#ffffff",
+  },
+  darkTextInput: {
+    borderBottomColor: "#000000",
   },
   inlineTextButton: {
     color: "#87F1FF",
@@ -42,5 +82,61 @@ export default StyleSheet.create({
   pressedInlineTextButton: {
     color: "#87F1FF",
     opacity: 0.6,
+  },
+
+  button1: {
+    backgroundColor: "#ff0000",
+    height: "auto",
+    width: "auto",
+    padding: 12,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  buttonOk: {
+    backgroundColor: "#688cde",
+    height: "auto",
+    width: "auto",
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 12,
+  },
+
+  buttonLogin: {
+    backgroundColor: "#498bc1",
+    height: "auto",
+    width: "auto",
+    paddingHorizontal: 22,
+    paddingVertical: 12,
+    borderRadius: 5,
+    alignItems: "center",
+    justifyContent: "center",
+    marginVertical: 15,
+  },
+  buttonReset: {
+    backgroundColor: "#d1495b",
+    height: "auto",
+    width: "auto",
+    paddingHorizontal: 22,
+    paddingVertical: 10,
+    borderRadius: 5,
+    alignItems: "center",
+    justifyContent: "center",
+    marginVertical: 15,
+  },
+  buttonManage: {
+    backgroundColor: "#5899E2",
+    height: "auto",
+    width: 200,
+    paddingHorizontal: 10,
+    paddingVertical: 12,
+    borderRadius: 5,
+    alignItems: "center",
+    justifyContent: "center",
+    marginVertical: 7,
+  },
+  buttonContainer: {
+    marginRight: 16,
   },
 });
