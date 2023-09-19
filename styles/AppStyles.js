@@ -85,11 +85,11 @@ export default StyleSheet.create({
   },
 
   button1: {
-    backgroundColor: "#ff0000",
+    backgroundColor: "#FF7547",
     height: "auto",
     width: "auto",
     padding: 12,
-    borderRadius: 10,
+    borderRadius: 5,
     alignItems: "center",
     justifyContent: "center",
     marginRight: 14,
@@ -98,7 +98,7 @@ export default StyleSheet.create({
     backgroundColor: "#688cde",
     height: "auto",
     width: "auto",
-    borderRadius: 10,
+    borderRadius: 5,
     alignItems: "center",
     justifyContent: "center",
     padding: 12,
