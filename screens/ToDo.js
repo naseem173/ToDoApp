@@ -30,6 +30,7 @@ export default function ToDo({ navigation }) {
   let [isLoading, setIsLoading] = React.useState(true);
   let [isRefreshing, setIsRefreshing] = React.useState(false);
   let [toDos, setToDos] = React.useState([]);
+  let [descs, setDescs]= React.useState([]);
 
   let loadToDoList = async () => {
     const q = query(
@@ -79,12 +80,15 @@ export default function ToDo({ navigation }) {
             size={25}
             fillColor="#258ea6"
             unfillColor="#FFFFFF"
-            text={item.text}
+            text={<Text style={AppStyles.todoText}>{item.text}</Text>}
             iconStyle={{ borderColor: "#258ea6" }}
             onPress={(isChecked) => {
               checkToDoItem(item, isChecked);
             }}
           />
+          {item.description && (
+            <Text style={AppStyles.todoDescription}>{item.description}</Text>
+          )}
         </View>
         <InlineTextButton
           text="Delete"
@@ -135,9 +139,10 @@ export default function ToDo({ navigation }) {
     );
   };
 
-  let addToDo = async (todo) => {
+  let addToDo = async (todo, desc) => {
     let toDoToSave = {
       text: todo,
+      description: desc,
       completed: false,
       userId: auth.currentUser.uid,
     };

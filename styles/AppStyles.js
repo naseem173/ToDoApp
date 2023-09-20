@@ -140,4 +140,17 @@ export default StyleSheet.create({
   buttonContainer: {
     marginRight: 16,
   },
+  todoText: {
+    fontWeight: "bold",
+    fontSize: 22,
+    marginHorizontal: 20,
+  },
+  todoDescription: {
+    backgroundColor: "#E7ECEF",
+    borderRadius: 5,
+    paddingVertical: 10,
+    paddingHorizontal: 5,
+    margin: 5,
+    marginLeft:35,
+  },
 });
